@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class PokeCardComponent implements OnInit {
   //añadir el servicio pokeapi.service.ts al constructor y una funcion que obtenga los datos del pokemon
   public pokemonData: any;
+pokemonName: any;
 
   constructor(private pokeapiService: PokeapiService) {}
 
