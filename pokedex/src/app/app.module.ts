@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { PokeCardComponent } from './components/poke-card/poke-card.component';
+import { PokeapiService } from './services/pokeapi.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { PokeCardComponent } from './components/poke-card/poke-card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PokeapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
