@@ -1,6 +1,8 @@
 <div class="main">
 
     <img src="../assets/logo.png" alt="">
+
+    <h3>Ingresa un número y presiona enter</h3>
     <app-search (pokemonSelected)="setPokemonId($event)"/>
 
     <app-poke-card [pokemonId]="pokemonId"/>

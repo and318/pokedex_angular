@@ -1,9 +1,9 @@
 .card-img {
-text-align: center;
-background-color: #A3FE92;
-padding: 20px 30px;
-border-radius: 50px;
-.img-container {
+  text-align: center;
+  background-color: #a3fe92;
+  padding: 20px 30px;
+  border-radius: 50px;
+  .img-container {
     background-color: white;
     border-radius: 50%;
     height: 200px;
@@ -13,8 +13,7 @@ border-radius: 50px;
     flex-direction: column;
     align-items: center;
     img {
-        width: 150px;
+      width: 250px;
     }
-}
-
+  }
 }
