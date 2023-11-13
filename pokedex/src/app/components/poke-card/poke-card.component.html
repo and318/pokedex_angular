@@ -1,1 +1,8 @@
-<p>poke-card works!</p>
+<div class="card-img" *ngIf="pokemonData">
+    <div class="img-container">
+        <img src="{{pokemonImage}}">
+    </div>
+
+    <p>{{pokemonId}}</p>
+    <h4>{{pokemonName}}</h4>
+</div>

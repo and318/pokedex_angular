@@ -1,8 +1,8 @@
-<h1>{{pokemonName}}</h1>
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokeImage}}.png" />
-<!-- <input type="number" [(ngModel)]="pokemonNumber" placeholder="Enter a number"> -->
+<div class="main">
 
-<app-search (pokemonSelected)="setPokemonId($event)"/>
-<!-- <button (click)="searchPokemon()">Search</button> -->
+    <img src="../assets/logo.png" alt="">
+    <app-search (pokemonSelected)="setPokemonId($event)"/>
 
-<app-poke-card [pokemonId]="pokemonId"/>
+    <app-poke-card [pokemonId]="pokemonId"/>
+
+</div>

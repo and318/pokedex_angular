@@ -10,6 +10,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PokeCardComponent implements OnInit {
   //añadir el servicio pokeapi.service.ts al constructor y una funcion que obtenga los datos del pokemon
   public pokemonData: any;
+  pokemonName: any;
+  //añade una variable par guardar la url de la imagen del pokemon
+  pokemonImage: any;
+  pokemonId: any;
 
   @Input('pokemonId') set setPokemonById(id: number | string){
     if(id){
@@ -21,13 +25,20 @@ export class PokeCardComponent implements OnInit {
 
   ngOnInit(): void {
     //asigna la funcion getPokemonData como public que retorna void
-    // this.getPokemonData(1);
+    this.getPokemonData(1);
   }
 
   //asigna la funcion getPokemonData como public que retorna void
   public getPokemonData(pokemonId: number): void {
-      this.pokeapiService.getPokemon(pokemonId).subscribe((data) => {
+      this.pokeapiService.getPokemon(pokemonId).subscribe((data: any) => {
+        if (!data) {
+          return;
+        }
         this.pokemonData = data;
+        this.pokemonName = data.name;
+        this.pokemonImage = data.sprites.front_default;
+        this.pokemonId = data.id;
+        console.log(this.pokemonData);
       });
     }
 }
