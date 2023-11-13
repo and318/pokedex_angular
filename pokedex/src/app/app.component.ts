@@ -14,6 +14,7 @@ throw new Error('Method not implemented.');
   pokemonName: string | undefined;
   pokeImage: string | undefined;
   pokemonNumber: number | undefined;
+  pokemonId: number | undefined;
 
   ngOnInit() {
     this.getPokemonData(14);
@@ -28,5 +29,11 @@ throw new Error('Method not implemented.');
       .catch((error) => {
         console.log(error);
       });
+  }
+
+  //crea la funcion setPokemonId el cual
+  public setPokemonId(pokemonId: number): void {
+    this.pokemonId = pokemonId;
+    // this.getPokemonData(pokemonId);
   }
 }
